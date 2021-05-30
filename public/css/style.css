@@ -1,0 +1,30 @@
+body{
+    font-size: 20px;
+}
+.navbar-color{
+    background: rgba(0,0,0,0.6);
+}
+.div-opac{
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    /*width: 36%;*/
+}
+.text-color{
+    color: white; !important;
+}
+.fontbt{
+    font-size: 16px;
+    color: white; !important;
+}
+.col-md-3 div:not(:hover){
+    transition: 1s;
+}
+.mtopcont{
+    margin-top: 80px;
+}
+.logo{
+    width: 35px;
+}
+.brandcar{
+    padding-top: 23rem;
+}
