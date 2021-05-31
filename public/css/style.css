@@ -20,11 +20,25 @@ body{
     transition: 1s;
 }
 .mtopcont{
-    margin-top: 80px;
+    margin-top: 59px;
 }
 .logo{
     width: 35px;
 }
 .brandcar{
     padding-top: 23rem;
+}
+.div-m-5{
+    margin-top: 5%;
+}
+.div-models{
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.body-m-c{
+    background: url("../img/audi-apre-la-prima-concessionaria-virtuale.jpg");
+    background-size: cover;
+    height: 100vh;
+    min-height: 600px;
+    background-position: center center;
+    background-attachment: fixed;
 }
