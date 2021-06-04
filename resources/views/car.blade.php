@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('content')
-    <div class="container mtopcont shadow-lg">
+    <div class="container shadow-lg">
         @foreach($cars as $car)
             <h1 class="text-center">{{$car->modelcar->brand->name}} {{$car->modelcar->name}}</h1>
             <img class="card-img-top my-3" src="{{asset('/storage/img/'.$car->photo)}}" alt=" Card image cap">

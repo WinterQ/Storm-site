@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="953b4d12-2ca1-4117-85a7-bf51f914b6f5" name="Default Changelist" comment="" />
+    <list default="true" id="953b4d12-2ca1-4117-85a7-bf51f914b6f5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/all-cars.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/all-cars.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/car.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/car.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/models.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/models.blade.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

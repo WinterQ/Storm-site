@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('content')
-    <div class="container mtopcont shadow-lg">
+    <div class="container shadow-lg">
         <div class="card-group mt-3">
             @foreach($cars as $car)
                 <div class="col-md-4">
