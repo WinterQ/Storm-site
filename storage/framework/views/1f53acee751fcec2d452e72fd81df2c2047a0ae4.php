@@ -9,7 +9,7 @@
                             <h2 class="card-title"><?php echo e($car->modelcar->brand->name); ?> <?php echo e($car->modelcar->name); ?></h2>
                             <p class="card-text">Количество: <?php echo e($car->count_seats); ?></p>
                             <p class="card-text">Цена: <?php echo e($car->price); ?></p>
-                            <a class="btn btn-primary" href="<?php echo e(route('cars-model',[$car->id])); ?>">Подробно...</a>
+                            <a class="btn btn-primary" href="<?php echo e(route('cars-model',[$car->id])); ?>">В корзину</a>
                         </div>
                     </div>
                 </div>

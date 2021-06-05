@@ -11,7 +11,7 @@
                             <h2 class="card-title">{{$car->modelcar->brand->name}} {{$car->modelcar->name}}</h2>
                             <p class="card-text">Количество: {{$car->count_seats}}</p>
                             <p class="card-text">Цена: {{$car->price}}</p>
-                            <a class="btn btn-primary" href="{{route('cars-model',[$car->id])}}">Подробно...</a>
+                            <a class="btn btn-primary" href="{{route('cars-model',[$car->id])}}">В корзину</a>
                         </div>
                     </div>
                 </div>

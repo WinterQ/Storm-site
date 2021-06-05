@@ -34,11 +34,14 @@ body{
 .div-models{
     background-color: rgba(0, 0, 0, 0.6);
 }
-.body-m-c{
-    background: url("../img/audi-apre-la-prima-concessionaria-virtuale.jpg");
-    background-size: cover;
-    height: 100vh;
-    min-height: 600px;
-    background-position: center center;
-    background-attachment: fixed;
+.body-m-c::before{
+    content: '';
+    position: fixed; /* Фиксируем на одном месте */
+    left: 0; right: 0; /* Вся ширин */
+    top: 0; bottom: 0; /* Вся высота */
+    z-index: -1; /* Фон ниже текста */
+    /* Параметры фона */
+    background: url("../img/audi-apre-la-prima-concessionaria-virtuale.jpg") center / cover no-repeat;
+    filter: blur(6px); /* Размытие */
 }
+

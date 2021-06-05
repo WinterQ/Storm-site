@@ -25,6 +25,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo e(route('all-cars')); ?>">Автомобили в наличии</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo e(route('basket-show')); ?>">Корзина</a>
+                </li>
             </ul>
 
             <!-- Right Side Of Navbar -->
