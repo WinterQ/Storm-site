@@ -10,7 +10,7 @@
     <title>Главная страница</title>
 </head>
 <body class="">
-<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+<nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
             <img class="logo" src="{{asset('img\Storm_logo.png')}}" alt="">
@@ -25,13 +25,15 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('all-cars')}}">Автомобили в наличии</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{route('basket-show')}}">Корзина</a>
-                </li>
             </ul>
 
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
+                <li class="nav-item mr-3">
+                    <a class="nav-link" href="{{route('basket-show')}}">
+                        <img src="{{'img/polzovatelskaya-korzina.png'}}" alt="" width="40">
+                    </a>
+                </li>
                 <!-- Authentication Links -->
                 @guest
                     @if (Route::has('login'))
