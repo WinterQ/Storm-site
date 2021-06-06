@@ -7,9 +7,9 @@
                         <img class="card-img-top" src="<?php echo e(asset('/storage/img/'.$car->photo)); ?>" alt="Card image cap">
                         <div class="card-body">
                             <h2 class="card-title"><?php echo e($car->modelcar->brand->name); ?> <?php echo e($car->modelcar->name); ?></h2>
-                            <p class="card-text">Количество: <?php echo e($car->count_seats); ?></p>
+                            <p class="card-text">В наличии: <?php echo e($car->count_seats); ?></p>
                             <p class="card-text">Цена: <?php echo e($car->price); ?></p>
-                            <a class="btn btn-primary" href="<?php echo e(route('cars-model',[$car->id])); ?>">В корзину</a>
+                            <a class="btn btn-primary" href="<?php echo e(route('cars-model',[$car->id])); ?>">Подробно...</a>
                         </div>
                     </div>
                 </div>
