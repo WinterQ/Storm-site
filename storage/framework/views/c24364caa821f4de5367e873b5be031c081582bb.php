@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
     <link rel="stylesheet" type="text/css" href="<?php echo e(asset('js/slick/slick.css')); ?>"/>
     <link rel="stylesheet" type="text/css" href="<?php echo e(asset('js/slick/slick-theme.css')); ?>"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -10,7 +11,7 @@
     <title>Главная страница</title>
 </head>
 <body class="">
-<nav class="navbar navbar-expand-md navbar-dark navbar-color shadow-sm fixed-top">
+<nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark">
     <div class="container">
         <a class="navbar-brand" href="<?php echo e(url('/')); ?>">
             <img class="logo" src="<?php echo e(asset('img\Storm_logo.png')); ?>" alt="">
@@ -29,6 +30,11 @@
 
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
+                <li class="nav-item mr-3">
+                    <a class="nav-link" href="<?php echo e(route('basket-show')); ?>">
+                        <img src="<?php echo e(asset('img/polzovatelskaya-korzina.png')); ?>" alt="" width="40">
+                    </a>
+                </li>
                 <!-- Authentication Links -->
                 <?php if(auth()->guard()->guest()): ?>
                     <?php if(Route::has('login')): ?>
@@ -56,7 +62,6 @@
                                 <?php echo e(__('Logout')); ?>
 
                             </a>
-
                             <form id="logout-form" action="<?php echo e(route('logout')); ?>" method="POST" class="d-none">
                                 <?php echo csrf_field(); ?>
                             </form>
@@ -69,10 +74,10 @@
 </nav>
 <?php echo $__env->yieldContent('content'); ?>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="<?php echo e(asset('js/main.js')); ?>"></script>
+<script type="text/javascript" src="<?php echo e(asset('js/main.js')); ?>"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script type="text/javascript" src="<?php echo e(asset('js/slick/slick.min.js')); ?>"></script>
 </body>

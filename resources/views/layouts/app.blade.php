@@ -20,7 +20,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-dark navbar-color shadow-sm fixed-top">
+        <nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <img class="logo" src="{{asset('img\Storm_logo.png')}}" alt="">
@@ -62,7 +62,7 @@
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
-
+                                    <a id="admin_panel" class="dropdown-item" href="/admin_panel">админ панель</a>
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>

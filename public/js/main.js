@@ -41,18 +41,13 @@ $(document).ready(function () {
 })
 
 function addToBasket() {
-    /*let id = $('.details_name').data('id')
-    let qty = parseInt($('#quantity_input').val())
-
-    let total_qty = parseInt($('.cart-qty').text())
-    total_qty += qty
-    $('.cart-qty').text(total_qty)*/
+    let id = $('.details_name').data('id')
 
     $.ajax({
-        url: "{{route('addToBasket')}}",
+        url: "/add-to-basket",
         type: "POST",
         data: {
-            id: 'хааааай',
+            id: id,
         },
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')

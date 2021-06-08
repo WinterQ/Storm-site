@@ -1,5 +1,7 @@
+
+
 <?php $__env->startSection('content'); ?>
-    <div class="container mtopcont shadow-lg">
+    <div class="container shadow-lg">
         <div class="row d-flex justify-content-center">
             <?php $__currentLoopData = $models; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $model): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <div class="col-md-5 div-hover my-3">

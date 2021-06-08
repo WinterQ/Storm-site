@@ -20,7 +20,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-dark navbar-color shadow-sm fixed-top">
+        <nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark">
             <div class="container">
                 <a class="navbar-brand" href="<?php echo e(url('/')); ?>">
                     <img class="logo" src="<?php echo e(asset('img\Storm_logo.png')); ?>" alt="">
@@ -64,7 +64,7 @@
                                         <?php echo e(__('Logout')); ?>
 
                                     </a>
-
+                                    <a id="admin_panel" class="dropdown-item" href="/admin_panel">админ панель</a>
                                     <form id="logout-form" action="<?php echo e(route('logout')); ?>" method="POST" class="d-none">
                                         <?php echo csrf_field(); ?>
                                     </form>
