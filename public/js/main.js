@@ -59,9 +59,6 @@ function addToBasket() {
         },
         success: (data) => {
             console.log(data)
-        },
-        error: (data) => {
-            console.log(data)
         }
     });
 }

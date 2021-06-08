@@ -2,36 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="953b4d12-2ca1-4117-85a7-bf51f914b6f5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Storm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Storm.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BasketController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BasketController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootstrap/cache/packages.php" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/cache/packages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootstrap/cache/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/cache/services.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/all-cars.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/all-cars.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/car.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/car.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/dsfXc87DtcUTp9Z3bcAat7q1ncAWgeE9Gwe7cxSe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/nF7dpe0QXLctPd87BdpeN4fgPuZgy23lWPBXw2kf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/sessions/nF7dpe0QXLctPd87BdpeN4fgPuZgy23lWPBXw2kf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/1f53acee751fcec2d452e72fd81df2c2047a0ae4.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/1f53acee751fcec2d452e72fd81df2c2047a0ae4.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/nF7dpe0QXLctPd87BdpeN4fgPuZgy23lWPBXw2kf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/framework/views/2b2ce36eebdef21d47f6426ece33335d63c807ce.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/2b2ce36eebdef21d47f6426ece33335d63c807ce.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/b6c0b7bf286f893f75e1fdc97b3dbcb0dbbae3fb.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/b6c0b7bf286f893f75e1fdc97b3dbcb0dbbae3fb.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/autoload.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/InstalledVersions.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/InstalledVersions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_files.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_files.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/platform_check.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/platform_check.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,9 +158,9 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="ignore_missing_gitignore" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../LaravelShop" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="PhpAnnotations.SettingsForm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -256,6 +231,10 @@
       <workItem from="1622914288072" duration="88000" />
       <workItem from="1622960729005" duration="1828000" />
       <workItem from="1622962808683" duration="308000" />
+      <workItem from="1622980888815" duration="596000" />
+      <workItem from="1623001518247" duration="1084000" />
+      <workItem from="1623044176317" duration="13000" />
+      <workItem from="1623044220357" duration="2610000" />
     </task>
     <servers />
   </component>
