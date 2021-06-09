@@ -10,8 +10,8 @@
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="/">Домой</a></li>
-                        <li class="breadcrumb-item active">Главная</li>
+                        <li class="breadcrumb-item"><a href="{{route('home')}}">Домой</a></li>
+                        <li class="breadcrumb-item active"><a href="{{url('admin_panel')}}">Главная</a></li>
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -73,21 +73,6 @@
                                                placeholder="Введите мощьность двигателя" required>
                                     </div>
                                     <div class="form-group">
-                                        <label>Длина</label>
-                                        <input value="{{$car->length}}" type="text" name="length" class="form-control" id="exampleInputCategory"
-                                               placeholder="Введите длину" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Ширина</label>
-                                        <input value="{{$car->width}}" type="text" name="width" class="form-control" id="exampleInputCategory"
-                                               placeholder="Введите ширину" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Высота</label>
-                                        <input value="{{$car->height}}" type="text" name="height" class="form-control" id="exampleInputCategory"
-                                               placeholder="Введите высоту" required>
-                                    </div>
-                                    <div class="form-group">
                                         <label>Количество</label>
                                         <input value="{{$car->count_seats}}" type="text" name="count_seats" class="form-control" id="exampleInputCategory"
                                                placeholder="Введите количество" required>
@@ -98,9 +83,25 @@
                                                placeholder="Введите год выпуска" required>
                                     </div>
                                     <div class="form-group">
-                                        <label for="photo" class="form-label">Фото:</label>
+                                        {{--<label for="photo" class="form-label">Фото:</label>
+                                        <input value="{{$car->photo}}" type="file" class="form-control" id="photo" name="photo">--}}
+                                        <img class="w-100" id="showImage" src="{{asset('storage/img/'.$car->photo)}}" alt="">
                                         <input value="{{$car->photo}}" type="file" class="form-control" id="photo"
-                                               name="photo">
+                                               name="photo" onchange="loadImage(this)">
+                                        <script>
+                                            function loadImage(e){
+                                                showImage.bidden = false;
+                                                showImage.src = URL.createObjectURL(e.files[0]);
+                                                showImage.onload = function(){
+                                                    URL.revokeObjectURL(e.src);
+                                                }
+                                            }
+                                            tinymce.init({
+                                                selector: 'img',
+                                                plugins: 'advlist autolink lists charmap print preview hr',
+                                                toolbar_mode: 'floating',
+                                            })
+                                        </script>
                                     </div>
                                     <div class="form-group">
                                         <label>Статус</label>

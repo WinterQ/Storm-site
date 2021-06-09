@@ -9,8 +9,8 @@
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="/">Домой</a></li>
-                        <li class="breadcrumb-item active">Главная</li>
+                        <li class="breadcrumb-item"><a href="{{route('home')}}">Домой</a></li>
+                        <li class="breadcrumb-item active"><a href="{{url('admin_panel')}}">Главная</a></li>
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -34,11 +34,10 @@
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn btn-danger btn-sm delete-btn">
-                                        <i class="fas fa-trash">    </i>
-                                        Удалить
+                                        <i class="fa fa-trash-o"></i>
                                     </button>
                                 </form>
-                                <a href="{{route('car.edit',$car->id)}}" class="btn btn-primary btn-sm edit-btn">Изменить</a>
+                                <a href="{{route('car.edit',$car->id)}}" class="btn btn-primary btn-sm edit-btn"><i class="fa fa-pencil"></i></a>
                             </div>
                         </div>
                     </div>

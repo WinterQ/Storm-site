@@ -1,19 +1,15 @@
 <?php
 
-use App\Http\Controllers\BasketController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CarController;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\HomeController;
 
 Route::get('/',[App\Http\Controllers\BrandController::class,'index']);
-Route::get('/basket',[App\Http\Controllers\BasketController::class,'show'])->name('basket-show');
 Route::get('/brand/{brand}',[App\Http\Controllers\BrandController::class,'show'])->name('brand-show');
 Route::get('/brand/model/{modelcar}',[CarController::class,'carsForModel'])->name('cars-model');
 Route::get('/cars',[CarController::class,'cars'])->name('cars-all');
 Route::get('/carsAll',[CarController::class,'carsAll'])->name('all-cars');
-
-Route::post('/add-to-basket',[BasketController::class,'addToBasket'])->name('addToBasket');
 
 Auth::routes();
 

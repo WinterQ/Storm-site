@@ -1,32 +1,33 @@
 <?php $__env->startSection('content'); ?>
     <div class="container shadow-lg">
         <?php $__currentLoopData = $cars; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $car): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <h1 class="text-center"><?php echo e($car->modelcar->brand->name); ?> <?php echo e($car->modelcar->name); ?></h1>
-            <img class="card-img-top my-3" src="<?php echo e(asset('/storage/img/'.$car->photo)); ?>" alt=" Card image cap">
-            <h2>Характеристики:</h2>
-            <span class="">
-                <div class="row border-top-0">
-                <div class="col-md-5">
-                    <p>Тип кузова: <?php echo e($car->bodywork->name); ?></p>
-                    <p>Коробка передач: <?php echo e($car->transmission->name); ?></p>
-                    <p>Тип двигателя: <?php echo e($car->modelcar->engine->engine_type); ?></p>
-                    <p>Мощность двигателя: <?php echo e($car->engine_power); ?></p>
+            <div class="row bg-dark mt-3 text-white rounded">
+                <div class="col p-0">
+                    <img class="w-100 rounded" src="<?php echo e(asset('/storage/img/'.$car->photo)); ?>" alt=" Card image cap">
+                    <p class="font-weight-bold text-center bg-blue">Цена: <?php echo e($car->price); ?> руб.</p>
                 </div>
-                <div class="col-md-3">
-                    <p>Цвет: <?php echo e($car->color->name); ?></p>
-                    <p>Длина: <?php echo e($car->length); ?></p>
-                    <p>Ширина: <?php echo e($car->width); ?></p>
-                    <p>Высота: <?php echo e($car->height); ?></p>
+                <div class="col-md-6">
+                    <h4 class="text-center m-3"><?php echo e($car->modelcar->brand->name); ?> <?php echo e($car->modelcar->name); ?></h4>
+                    <hr class="bg-white w-50 rounded">
+                    <h4>Характеристики:</h4>
+                    <div class="row border-top-0">
+                        <div class="col-md-auto">
+                            <p>Тип кузова: <?php echo e($car->bodywork->name); ?></p>
+                            <p>Цвет: <?php echo e($car->color->name); ?></p>
+                            <p>Коробка передач: <?php echo e($car->transmission->name); ?></p>
+                            <p>Тип двигателя: <?php echo e($car->modelcar->engine->engine_type); ?></p>
+
+                        </div>
+                        <div class="col">
+                            <p>В наличии: <?php echo e($car->count_seats); ?></p>
+                            <p>Год выпуска: <?php echo e($car->year_release); ?></p>
+                            <p>Мощность двигателя: <?php echo e($car->engine_power); ?></p>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <a class="btn btn-primary p-1" href="#">Сделать заявку</a>
+                    </div>
                 </div>
-                <div class="col-md-3">
-                    <p>В наличии: <?php echo e($car->count_seats); ?></p>
-                    <p>Год выпуска: <?php echo e($car->year_release); ?></p>
-                    <p>Цена: <?php echo e($car->price); ?> руб.</p>
-                </div>
-            </div>
-            </span>
-            <div class="d-flex justify-content-end p-3">
-                <button class="btn btn-primary align-self-center cart_button">В корзину</button>
             </div>
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
     </div>

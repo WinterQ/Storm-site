@@ -8,7 +8,8 @@
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="/admin/plugins/fontawesome-free/css/all.min.css">
+    {{--<link rel="stylesheet" href="/admin/plugins/fontawesome-free/css/all.min.css">--}}
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" type="text/css" rel="stylesheet">
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Tempusdominus Bootstrap 4 -->
@@ -39,7 +40,7 @@
         <!-- Brand Logo -->
         <a href="index3.html" class="brand-link">
             <img src="/admin/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-            <span class="brand-text font-weight-light">AdminLTE 3</span>
+            <span class="brand-text font-weight-light">Админ-панель</span>
         </a>
 
         <!-- Sidebar -->
@@ -59,7 +60,7 @@
                     <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
                     <div class="input-group-append">
                         <button class="btn btn-sidebar">
-                            <i class="fas fa-search fa-fw"></i>
+                            <i class="fa fa-search fa-fw"></i>
                         </button>
                     </div>
                 </div>
@@ -70,7 +71,7 @@
 
                     <li class="nav-item">
                         <a href="{{route('homeAdmin')}}" class="nav-link">
-                            <i class="nav-icon fas fa-tachometer-alt"></i>
+                            <i class="nav-icon fa fa-tachometer-alt"></i>
                             <p>  Главная </p>
                         </a>
                     </li>
@@ -78,7 +79,7 @@
                         <a href="#" class="nav-link">
                             <i class="nav-icon far fa-newspaper"></i>
                             <p>Автомобиль
-                                <i class="right fas fa-angle-left"></i>
+                                <i class="right fa fa-angle-left"></i>
                             </p>                </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
@@ -95,9 +96,9 @@
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-tree"></i>
+                            <i class="nav-icon fa fa-tree"></i>
                             <p>Марка
-                                <i class="right fas fa-angle-left"></i>
+                                <i class="right fa fa-angle-left"></i>
                             </p>                </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
@@ -114,9 +115,9 @@
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-edit"></i>
+                            <i class="nav-icon fa fa-edit"></i>
                             <p>Модель
-                                <i class="right fas fa-angle-left"></i>
+                                <i class="right fa fa-angle-left"></i>
                             </p>                </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
@@ -133,9 +134,9 @@
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-edit"></i>
+                            <i class="nav-icon fa fa-edit"></i>
                             <p>Цвет
-                                <i class="right fas fa-angle-left"></i>
+                                <i class="right fa fa-angle-left"></i>
                             </p>                </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
@@ -152,9 +153,9 @@
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-edit"></i>
+                            <i class="nav-icon fa fa-edit"></i>
                             <p>КПП
-                                <i class="right fas fa-angle-left"></i>
+                                <i class="right fa fa-angle-left"></i>
                             </p>                </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">

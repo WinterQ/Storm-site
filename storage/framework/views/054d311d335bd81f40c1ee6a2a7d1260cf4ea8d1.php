@@ -1,4 +1,3 @@
-
 <?php $__env->startSection('title','Все марки'); ?>
 <?php $__env->startSection('content'); ?>
     <div class="content-header">
@@ -9,8 +8,8 @@
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="/">Домой</a></li>
-                        <li class="breadcrumb-item active">Главная</li>
+                        <li class="breadcrumb-item"><a href="<?php echo e(route('home')); ?>">Домой</a></li>
+                        <li class="breadcrumb-item active"><a href="<?php echo e(url('admin_panel')); ?>">Главная</a></li>
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -34,10 +33,10 @@
                                     <?php echo csrf_field(); ?>
                                     <?php echo method_field('DELETE'); ?>
                                     <button type="submit" class="btn btn-danger btn-sm delete-btn">
-                                        <i class="fas fa-trash">Удалить</i>
+                                        <i class="fas fa-trash"></i>
                                     </button>
                                 </form>
-                                <a href="<?php echo e(route('brand.edit',$brand->id)); ?>" class="btn btn-primary btn-sm edit-btn">Изменить</a>
+                                <a href="<?php echo e(route('brand.edit',$brand->id)); ?>" class="btn btn-primary btn-sm edit-btn"><i class="fa fa-pencil"></i></a>
                             </div>
                         </div>
                     </div>

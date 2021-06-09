@@ -33,28 +33,3 @@ $(function (){
     })
 });
 
-$(document).ready(function () {
-    $('.cart_button').click(function (event) {
-        event.preventDefault()
-        addToBasket()
-    })
-})
-
-function addToBasket() {
-    let id = $('.details_name').data('id')
-
-    $.ajax({
-        url: "/add-to-basket",
-        type: "POST",
-        data: {
-            id: id,
-        },
-        headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        },
-        success: (data) => {
-            console.log(data)
-        }
-    });
-}
-

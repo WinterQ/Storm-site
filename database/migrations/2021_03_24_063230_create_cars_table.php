@@ -20,9 +20,6 @@ class CreateCarsTable extends Migration
             $table->foreignId('color_id')->constrained('colors')->cascadeOnDelete()->cascadeOnUpdate();
             $table->foreignId('transmission_id')->constrained('transmissions')->cascadeOnDelete()->cascadeOnUpdate();
             $table->integer('engine_power');
-            $table->integer('length');
-            $table->integer('width');
-            $table->integer('height');
             $table->integer('count_seats');
             $table->date('year_release');
             $table->boolean('status')->default(true);

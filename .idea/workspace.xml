@@ -27,12 +27,56 @@
   <component name="ChangeListManager">
     <list default="true" id="953b4d12-2ca1-4117-85a7-bf51f914b6f5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e0188baa-c174-4f22-a338-04332a746175.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e0188baa-c174-4f22-a338-04332a746175.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/CarController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/CarController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BasketController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/CarRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/CarRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Car.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Car.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_24_063230_create_cars_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_24_063230_create_cars_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/764f42550a041f14cbda134a8eba037feda89c08.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/764f42550a041f14cbda134a8eba037feda89c08.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/c24364caa821f4de5367e873b5be031c081582bb.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/c24364caa821f4de5367e873b5be031c081582bb.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/e1b4a85c68a868361e409ae805fe072c31f76ee7.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/e1b4a85c68a868361e409ae805fe072c31f76ee7.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/f8bb175a6221df329b9da4c3f29c013eb2e72633.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/f8bb175a6221df329b9da4c3f29c013eb2e72633.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/bodywork/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/bodywork/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/bodywork/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/bodywork/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/bodywork/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/bodywork/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/brand/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/brand/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/brand/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/brand/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/brand/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/brand/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/car/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/car/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/car/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/car/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/car/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/car/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/color/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/color/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/color/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/color/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/color/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/color/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/employee/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/employee/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/employee/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/employee/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/employee/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/employee/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/engine/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/engine/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/engine/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/engine/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/engine/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/engine/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/home/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/home/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/model/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/model/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/model/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/model/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/model/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/model/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/post/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/post/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/post/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/post/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/post/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/post/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/transmission/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/transmission/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/transmission/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/transmission/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/transmission/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/transmission/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/basket.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/car.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/car.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/admin_layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/admin_layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/1o0B4oqyo5HY3QjIA42HE3bhVtiL9p4epZ5VeESd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/054d311d335bd81f40c1ee6a2a7d1260cf4ea8d1.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/054d311d335bd81f40c1ee6a2a7d1260cf4ea8d1.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/2155d751031718adc7ec74dc734a222d12d289e9.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/2155d751031718adc7ec74dc734a222d12d289e9.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/2b2ce36eebdef21d47f6426ece33335d63c807ce.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/2b2ce36eebdef21d47f6426ece33335d63c807ce.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/6acab6fd35f55dccf917246b0689bf2674ce1dab.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/6acab6fd35f55dccf917246b0689bf2674ce1dab.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/8beb7789a1f31f4e8049e7dc493eda9577ea7dce.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/8beb7789a1f31f4e8049e7dc493eda9577ea7dce.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/b6c0b7bf286f893f75e1fdc97b3dbcb0dbbae3fb.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/b6c0b7bf286f893f75e1fdc97b3dbcb0dbbae3fb.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/logs/laravel.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/laravel.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -263,6 +307,9 @@
       <workItem from="1623044220357" duration="2610000" />
       <workItem from="1623129897997" duration="4011000" />
       <workItem from="1623134771446" duration="5363000" />
+      <workItem from="1623170743699" duration="724000" />
+      <workItem from="1623237016391" duration="6595000" />
+      <workItem from="1623254167017" duration="7418000" />
     </task>
     <servers />
   </component>
@@ -292,31 +339,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="79" y="198" width="816" height="730" key="#Intentions" timestamp="1623130545247">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="79" y="198" width="816" height="730" key="#Intentions/0.0.1920.1080@0.0.1920.1080" timestamp="1623130545247" />
-    <state x="267" y="294" key="FileChooserDialogImpl" timestamp="1623138355085">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="267" y="294" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1623138355085" />
-    <state x="738" y="242" key="RollbackChangesDialog" timestamp="1623134592854">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="738" y="242" key="RollbackChangesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1623134592854" />
-    <state x="777" y="453" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1623134608592">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="777" y="453" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1080@0.0.1920.1080" timestamp="1623134608592" />
-    <state x="732" y="434" key="git4idea.ui.GitResetDialog" timestamp="1623134716851">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="732" y="434" key="git4idea.ui.GitResetDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1623134716851" />
-    <state x="616" y="250" key="run.anything.popup" timestamp="1623135844840">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="616" y="250" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1623135844840" />
   </component>
 </project>

@@ -9,7 +9,7 @@ class Car extends Model
 {
     use HasFactory;
     public $timestamps=false;
-    protected $fillable=['model_car_id','bodywork_id','color_id','transmission_id','engine_power','length','width','height','count_seats','year_release','photo','status','price'];
+    protected $fillable=['model_car_id','bodywork_id','color_id','transmission_id','engine_power','count_seats','year_release','photo','status','price'];
 
     public function modelcar()
     {

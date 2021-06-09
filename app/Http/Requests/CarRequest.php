@@ -29,9 +29,6 @@ class CarRequest extends FormRequest
             'color_id'=>'required',
             'transmission_id'=>'required',
             'engine_power'=>'required',
-            'length'=>'required',
-            'width'=>'required',
-            'height'=>'required',
             'count_seats'=>'required',
             'year_release'=>'required',
             'photo'=>'image',
@@ -44,12 +41,6 @@ class CarRequest extends FormRequest
         return [
             'engine_power.required' => 'Поле "Мощность двигателя" обязательно для заполнения',
             /*'engine_power.min' => 'Поле "Мощность двигателя" должно быть длиной не менее 3 символов',*/
-            'length.required' => 'Поле "Длина" обязательно для заполнения',
-            /*'length.min' => 'Поле "Длина" должно быть длиной не менее 3 символов',*/
-            'width.required' => 'Поле "Ширина" обязательно для заполнения',
-            /*'width.min' => 'Поле "Ширина" должно быть длиной не менее 3 символов',*/
-            'height.required' => 'Поле "Высота" обязательно для заполнения',
-            /*'height.min' => 'Поле "Высота" должно быть длиной не менее 3 символов',*/
             'count_seats.required' => 'Поле "Количество" обязательно для заполнения',
            /* 'count_seats.min' => 'Поле "Количество" должно быть длиной не менее 3 символов',*/
             'year_release.required' => 'Поле "Год выпуска" обязательно для заполнения',
