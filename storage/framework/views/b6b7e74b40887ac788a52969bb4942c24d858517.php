@@ -15,6 +15,7 @@
     <link rel="stylesheet" type="text/css" href="<?php echo e(asset('js/slick/slick-theme.css')); ?>"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="<?php echo e(asset('css/style.css')); ?>">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" type="text/css" rel="stylesheet">
     <!-- Styles -->
     <link href="<?php echo e(asset('css/app.css')); ?>" rel="stylesheet">
 </head>
@@ -22,7 +23,7 @@
     <div id="app">
         <nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark">
             <div class="container">
-                <a class="navbar-brand" href="<?php echo e(url('/')); ?>">
+                <a class="navbar-brand" href="<?php echo e(url('home')); ?>">
                     <img class="logo" src="<?php echo e(asset('img\Storm_logo.png')); ?>" alt="">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="<?php echo e(__('Toggle navigation')); ?>">
@@ -64,7 +65,7 @@
                                         <?php echo e(__('Logout')); ?>
 
                                     </a>
-                                    <a id="admin_panel" class="dropdown-item" href="/admin_panel">админ панель</a>
+                                    <a id="admin_panel" class="dropdown-item" href="/admin_panel">Админ-панель</a>
                                     <form id="logout-form" action="<?php echo e(route('logout')); ?>" method="POST" class="d-none">
                                         <?php echo csrf_field(); ?>
                                     </form>

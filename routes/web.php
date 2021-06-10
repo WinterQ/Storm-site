@@ -22,5 +22,6 @@ Route::middleware(['role:admin'])->prefix('admin_panel')->group(function(){
     Route::resource('brand',App\Http\Controllers\Admin\BrandController::class);
     Route::resource('model',App\Http\Controllers\Admin\ModelController::class);
     Route::resource('color',App\Http\Controllers\Admin\ColorController::class);
+    Route::resource('actuator',App\Http\Controllers\Admin\ActuatorController::class);
     Route::resource('transmission',App\Http\Controllers\Admin\TransmissionController::class);
 });

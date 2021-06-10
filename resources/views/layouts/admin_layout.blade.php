@@ -170,6 +170,25 @@
                             </li>
                         </ul>
                     </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fa fa-edit"></i>
+                            <p>Привод
+                                <i class="right fa fa-angle-left"></i>
+                            </p>                </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="{{route('actuator.index')}}" class="nav-link">
+                                    <p>Все приводы</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{route('actuator.create')}}" class="nav-link">
+                                    <p>Добавить привод</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
             <!-- /.sidebar-menu -->

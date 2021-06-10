@@ -60,6 +60,14 @@
                                         </select>
                                     </div>
                                     <div class="form-group">
+                                        <label>Привод</label>
+                                        <select name="actuator_id" class="form-control" required>
+                                            @foreach($actuators as $actuator)
+                                                <option value="{{$actuator->id}}" @if($actuator->id == $car->actuator_id) selected @endif>{{$actuator->name}}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
                                         <label>Коробка передач</label>
                                         <select name="transmission_id" class="form-control" required>
                                             @foreach($transmissions as $transmission)
@@ -102,11 +110,6 @@
                                                 toolbar_mode: 'floating',
                                             })
                                         </script>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Статус</label>
-                                        <input value="{{$car->status}}" type="number" name="status" class="form-control" id="exampleInputCategory"
-                                               placeholder="Введите статус" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Цена</label>

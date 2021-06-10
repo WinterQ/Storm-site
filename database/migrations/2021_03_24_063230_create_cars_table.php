@@ -18,11 +18,11 @@ class CreateCarsTable extends Migration
             $table->foreignId('model_car_id')->constrained('model_cars')->cascadeOnDelete()->cascadeOnUpdate();
             $table->foreignId('bodywork_id')->constrained('bodyworks')->cascadeOnDelete()->cascadeOnUpdate();
             $table->foreignId('color_id')->constrained('colors')->cascadeOnDelete()->cascadeOnUpdate();
+            $table->foreignId('actuator_id')->constrained('actuators')->cascadeOnDelete()->cascadeOnUpdate();
             $table->foreignId('transmission_id')->constrained('transmissions')->cascadeOnDelete()->cascadeOnUpdate();
             $table->integer('engine_power');
             $table->integer('count_seats');
             $table->date('year_release');
-            $table->boolean('status')->default(true);
             $table->string('photo');
             $table->integer('price');
         });

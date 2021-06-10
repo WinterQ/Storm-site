@@ -3,9 +3,9 @@
 @section('content')
     <div class="container shadow-lg">
         @foreach($cars as $car)
-            <div class="row bg-dark mt-3 text-white rounded">
-                <div class="col p-0">
-                    <img class="w-100 rounded" src="{{asset('/storage/img/'.$car->photo)}}" alt=" Card image cap">
+            <div class="row bg-dark mt-4 text-white rounded">
+                <div class="col">
+                    <img class="w-100 rounded mt-3" src="{{asset('/storage/img/'.$car->photo)}}" alt=" Card image cap">
                     <p class="font-weight-bold text-center bg-blue">Цена: {{$car->price}} руб.</p>
                 </div>
                 <div class="col-md-6">
@@ -21,13 +21,14 @@
 
                         </div>
                         <div class="col">
+                            <p>Привод: {{$car->actuator->name}}</p>
                             <p>В наличии: {{$car->count_seats}}</p>
                             <p>Год выпуска: {{$car->year_release}}</p>
                             <p>Мощность двигателя: {{$car->engine_power}}</p>
                         </div>
                     </div>
-                    <div class="d-flex justify-content-center">
-                        <a class="btn btn-primary p-1" href="#">Сделать заявку</a>
+                    <div class="d-flex flex-wrap align-content-stretch">
+                        <a class="btn btn-primary pull-right" style="font-size: 20px" href="#" role="button">Сделать заявку</a>
                     </div>
                 </div>
             </div>

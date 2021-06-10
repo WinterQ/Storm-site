@@ -27,12 +27,12 @@ class CarRequest extends FormRequest
             'model_car_id'=>'required',
             'bodywork_id'=>'required',
             'color_id'=>'required',
+            'actuator_id'=>'required',
             'transmission_id'=>'required',
             'engine_power'=>'required',
             'count_seats'=>'required',
             'year_release'=>'required',
             'photo'=>'image',
-            'status'=>'required',
             'price'=>'required'
         ];
     }
@@ -46,8 +46,6 @@ class CarRequest extends FormRequest
             'year_release.required' => 'Поле "Год выпуска" обязательно для заполнения',
             /*'year_release.min' => 'Поле "Год выпуска" должно быть длиной не менее 3 символов',*/
             'photo.file'=>'Необходимо загрузить изображение',
-            'status.required' => 'Поле "Статус" обязательно для заполнения',
-            /*'status.min' => 'Поле "Статус" должно быть длиной не менее 3 символов',*/
             'price.required' => 'Поле "Цена" обязательно для заполнения',
             /*'price.min' => 'Поле "Цена" должно быть длиной не менее 3 символов',*/
         ];

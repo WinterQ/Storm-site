@@ -89,6 +89,19 @@
                     <a href="{{route('transmission.index')}}" class="small-box-footer">Подробная информация <i class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div>
+            <div class="col-lg-3 col-6">
+                <!-- small box -->
+                <div class="small-box bg-danger">
+                    <div class="inner">
+                        <h3>{{$actuators_count}}</h3>
+                        <p>Количество приводов (Actuators)</p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-pie-graph"></i>
+                    </div>
+                    <a href="{{route('actuator.index')}}" class="small-box-footer">Подробная информация <i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
             <!-- ./col -->
         </div>
         <!-- /.row -->

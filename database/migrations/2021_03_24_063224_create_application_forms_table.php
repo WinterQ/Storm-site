@@ -17,6 +17,7 @@ class CreateApplicationFormsTable extends Migration
             $table->id();
             $table->foreignId('client_id')->constrained('clients')->cascadeOnDelete()->cascadeOnUpdate();
             $table->dateTime('application_date');
+            $table->boolean('status')->default(true);
         });
     }
 

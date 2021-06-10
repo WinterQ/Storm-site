@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CarRequest;
+use App\Models\Actuator;
 use App\Models\Bodywork;
 use App\Models\Brand;
 use App\Models\Car;
@@ -36,8 +37,9 @@ class CarController extends Controller
         $models = ModelCar::all();
         $bodyworks = Bodywork::all();
         $colors = Color::all();
+        $actuators = Actuator::all();
         $transmissions = Transmission::all();
-        return view('admin.car.create',['brands'=>$brands,'models'=>$models,'bodyworks'=>$bodyworks,'colors'=>$colors,'transmissions'=>$transmissions]);
+        return view('admin.car.create',['brands'=>$brands,'models'=>$models,'bodyworks'=>$bodyworks,'colors'=>$colors,'actuators'=>$actuators,'transmissions'=>$transmissions]);
     }
 
     /**
@@ -49,7 +51,6 @@ class CarController extends Controller
     public function store(CarRequest $request)
     {
         if($request->file('photo')!=null){
-
             $fullFileName=$request->file('photo')->getClientOriginalName();
             $extension=$request->file('photo')->getClientOriginalExtension();
             $fileName=pathinfo($fullFileName,PATHINFO_FILENAME);
@@ -62,6 +63,7 @@ class CarController extends Controller
             'model_car_id'=>$request->input('model_car_id'),
             'bodywork_id'=>$request->input('bodywork_id'),
             'color_id'=>$request->input('color_id'),
+            'actuator_id'=>$request->input('actuator_id'),
             'transmission_id'=>$request->input('transmission_id'),
             'engine_power'=>$request->input('engine_power'),
             'count_seats'=>$request->input('count_seats'),
@@ -96,8 +98,9 @@ class CarController extends Controller
         $models = ModelCar::all();
         $bodyworks = Bodywork::all();
         $colors = Color::all();
+        $actuators = Actuator::all();
         $transmissions = Transmission::all();
-        return view('admin.car.edit',['car'=>$car,'brands'=>$brands,'models'=>$models,'bodyworks'=>$bodyworks,'colors'=>$colors,'transmissions'=>$transmissions]);
+        return view('admin.car.edit',['car'=>$car,'brands'=>$brands,'models'=>$models,'bodyworks'=>$bodyworks,'colors'=>$colors,'actuators'=>$actuators,'transmissions'=>$transmissions]);
     }
 
     /**
@@ -110,6 +113,7 @@ class CarController extends Controller
     public function update(CarRequest $request, Car $car)
     {
         // Определим новое имя файла
+
         $fullFileName=$request->file('photo')->getClientOriginalName();
         $extension = $request->file('photo')->getClientOriginalExtension();
 
@@ -123,12 +127,12 @@ class CarController extends Controller
             'model_car_id'=>$request->input('model_car_id'),
             'bodywork_id'=>$request->input('bodywork_id'),
             'color_id'=>$request->input('color_id'),
+            'actuator_id'=>$request->input('actuator_id'),
             'transmission_id'=>$request->input('transmission_id'),
             'engine_power'=>$request->input('engine_power'),
             'count_seats'=>$request->input('count_seats'),
             'year_release'=>$request->input('year_release'),
             'photo'=>$fileNameNew,
-            'status'=>$request->input('status'),
             'price'=>$request->input('price'),
         ])) {
             Storage::delete('public/img' . $oldImage);

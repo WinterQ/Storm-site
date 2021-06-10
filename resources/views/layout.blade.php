@@ -73,10 +73,10 @@
         <li class="list-inline-item"><a class="text-white" href="https://vk.com/pavel.aseev1"><i class="fa fa-vk"></i></a></li>
         <li class="list-inline-item"><a class="text-white" href="https://t.me/W1nterQ"><i class="fa fa-paper-plane"></i></a></li>
     </ul>
-    <p>телефон: +7 (929) 239-94-23</p>
+    <p class="my-2">телефон: +7 (929) 239-94-23</p>
 </div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-{{--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>--}}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script type="text/javascript" src="{{asset('js/main.js')}}"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

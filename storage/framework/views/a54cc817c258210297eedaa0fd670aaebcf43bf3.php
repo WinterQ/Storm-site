@@ -9,8 +9,8 @@
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="/">Домой</a></li>
-                        <li class="breadcrumb-item active">Главная</li>
+                        <li class="breadcrumb-item"><a href="<?php echo e(route('home')); ?>">Домой</a></li>
+                        <li class="breadcrumb-item active"><a href="<?php echo e(url('admin_panel')); ?>">Главная</a></li>
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -59,6 +59,14 @@
                                         </select>
                                     </div>
                                     <div class="form-group">
+                                        <label>Привод</label>
+                                        <select name="actuator_id" class="form-control" required>
+                                            <?php $__currentLoopData = $actuators; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $actuator): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                                <option value="<?php echo e($actuator->id); ?>" <?php if($actuator->id == $car->actuator_id): ?> selected <?php endif; ?>><?php echo e($actuator->name); ?></option>
+                                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
                                         <label>Коробка передач</label>
                                         <select name="transmission_id" class="form-control" required>
                                             <?php $__currentLoopData = $transmissions; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $transmission): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
@@ -72,21 +80,6 @@
                                                placeholder="Введите мощьность двигателя" required>
                                     </div>
                                     <div class="form-group">
-                                        <label>Длина</label>
-                                        <input value="<?php echo e($car->length); ?>" type="text" name="length" class="form-control" id="exampleInputCategory"
-                                               placeholder="Введите длину" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Ширина</label>
-                                        <input value="<?php echo e($car->width); ?>" type="text" name="width" class="form-control" id="exampleInputCategory"
-                                               placeholder="Введите ширину" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Высота</label>
-                                        <input value="<?php echo e($car->height); ?>" type="text" name="height" class="form-control" id="exampleInputCategory"
-                                               placeholder="Введите высоту" required>
-                                    </div>
-                                    <div class="form-group">
                                         <label>Количество</label>
                                         <input value="<?php echo e($car->count_seats); ?>" type="text" name="count_seats" class="form-control" id="exampleInputCategory"
                                                placeholder="Введите количество" required>
@@ -97,14 +90,24 @@
                                                placeholder="Введите год выпуска" required>
                                     </div>
                                     <div class="form-group">
-                                        <label for="photo" class="form-label">Фото:</label>
+                                        
+                                        <img class="w-100" id="showImage" src="<?php echo e(asset('storage/img/'.$car->photo)); ?>" alt="">
                                         <input value="<?php echo e($car->photo); ?>" type="file" class="form-control" id="photo"
-                                               name="photo">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Статус</label>
-                                        <input value="<?php echo e($car->status); ?>" type="number" name="status" class="form-control" id="exampleInputCategory"
-                                               placeholder="Введите статус" required>
+                                               name="photo" onchange="loadImage(this)">
+                                        <script>
+                                            function loadImage(e){
+                                                showImage.bidden = false;
+                                                showImage.src = URL.createObjectURL(e.files[0]);
+                                                showImage.onload = function(){
+                                                    URL.revokeObjectURL(e.src);
+                                                }
+                                            }
+                                            tinymce.init({
+                                                selector: 'img',
+                                                plugins: 'advlist autolink lists charmap print preview hr',
+                                                toolbar_mode: 'floating',
+                                            })
+                                        </script>
                                     </div>
                                     <div class="form-group">
                                         <label>Цена</label>

@@ -8,9 +8,10 @@
     <link rel="stylesheet" type="text/css" href="<?php echo e(asset('js/slick/slick-theme.css')); ?>"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="<?php echo e(asset('css/style.css')); ?>">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" type="text/css" rel="stylesheet">
     <title>Главная страница</title>
 </head>
-<body class="">
+<body>
 <nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark">
     <div class="container">
         <a class="navbar-brand" href="<?php echo e(url('/')); ?>">
@@ -30,11 +31,6 @@
 
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item mr-3">
-                    <a class="nav-link" href="<?php echo e(route('basket-show')); ?>">
-                        <img src="<?php echo e(asset('img/polzovatelskaya-korzina.png')); ?>" alt="" width="40">
-                    </a>
-                </li>
                 <!-- Authentication Links -->
                 <?php if(auth()->guard()->guest()): ?>
                     <?php if(Route::has('login')): ?>
@@ -73,6 +69,14 @@
     </div>
 </nav>
 <?php echo $__env->yieldContent('content'); ?>
+<div class="bg-dark text-white text-center py-2">
+    <ul class="list-inline h3">
+        <li class="list-inline-item"><a class="text-white" href="https://github.com/WinterQ"><i class="fa fa-github"></i></a></li>
+        <li class="list-inline-item"><a class="text-white" href="https://vk.com/pavel.aseev1"><i class="fa fa-vk"></i></a></li>
+        <li class="list-inline-item"><a class="text-white" href="https://t.me/W1nterQ"><i class="fa fa-paper-plane"></i></a></li>
+    </ul>
+    <p class="my-2">телефон: +7 (929) 239-94-23</p>
+</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 

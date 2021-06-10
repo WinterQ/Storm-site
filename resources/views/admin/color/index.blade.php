@@ -33,7 +33,7 @@
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn btn-danger btn-sm delete-btn">
-                                        <i class="fas fa-trash"></i>
+                                        <i class="fa fa-trash"></i>
                                     </button>
                                 </form>
                                 <a href="{{route('color.edit',$color->id)}}" class="btn btn-primary btn-sm edit-btn"><i class="fa fa-pencil"></i></a>

@@ -44,4 +44,11 @@ body{
     background: url("../img/audi-apre-la-prima-concessionaria-virtuale.jpg") center / cover no-repeat;
     filter: blur(6px); /* Размытие */
 }
+footer{
+    width: 100%;
+    background: #111;
+    margin-top: 1.5rem;
+    /* Sticky footer */
+    flex-shrink: 0;
+}
 

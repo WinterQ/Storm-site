@@ -228,13 +228,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="ignore_missing_gitignore" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../LaravelShop" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/actuator" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="PhpAnnotations.SettingsForm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Program Files\OpenServer\domains\Storm-site\resources\views\admin\actuator" />
       <recent name="D:\Program Files\OpenServer\domains\Storm\resources\views\admin" />
       <recent name="D:\Program Files\OpenServer\domains\Storm\resources\views\admin\model" />
       <recent name="D:\Program Files\OpenServer\domains\Storm\resources\views\admin\brand" />
@@ -310,6 +311,7 @@
       <workItem from="1623170743699" duration="724000" />
       <workItem from="1623237016391" duration="6595000" />
       <workItem from="1623254167017" duration="7418000" />
+      <workItem from="1623301752192" duration="10111000" />
     </task>
     <servers />
   </component>
@@ -339,5 +341,19 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="80" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1623301871767">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="80" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1623301871767" />
+    <state x="690" y="294" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1623303700703">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="690" y="294" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1623303700703" />
+    <state x="794" y="463" key="NewPhpFileDialog" timestamp="1623311914118">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="794" y="463" key="NewPhpFileDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1623311914118" />
   </component>
 </project>
