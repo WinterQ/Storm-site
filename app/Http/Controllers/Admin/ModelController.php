@@ -76,7 +76,7 @@ class ModelController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param  \App\Models\ModelCar  $model
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
      */
     public function edit(ModelCar $model)
     {
@@ -95,25 +95,28 @@ class ModelController extends Controller
     public function update(ModelCarRequest $request, ModelCar $model)
     {
         // Определим новое имя файла
-        $fullFileName=$request->file('photo')->getClientOriginalName();
-        $extension = $request->file('photo')->getClientOriginalExtension();
+        $oldImage = $model->photoCountries;
+        if($request->file('photo') != null) {
+            $fullFileName=$request->file('photo')->getClientOriginalName();
+            $extension = $request->file('photo')->getClientOriginalExtension();
 
-        $fileName = pathinfo($fullFileName, PATHINFO_FILENAME);
-        $fileNameNew = $fileName . '_' . time() . '.' . $extension;
+            $fileName = pathinfo($fullFileName, PATHINFO_FILENAME);
+            $fileNameNew = $fileName . '_' . time() . '.' . $extension;
 
-        $oldImage = $model->image;
-
-        //Создадим новый альбом
-        if($model->update([
-            'brand_id'=>$request->input('brand_id'),
-            'engine_id'=>$request->input('engine_id'),
-            'name'=>$request->input('name'),
-            'photo'=>$fileNameNew
-        ])) {
-            Storage::delete('public/img' . $oldImage);
-            //Загрузим файл на сервер
-            $request->file('photo')->storeAs('public/img', $fileNameNew);
-        };
+            //Создадим новый альбом
+            if($model->update([
+                'brand_id'=>$request->input('brand_id'),
+                'engine_id'=>$request->input('engine_id'),
+                'name'=>$request->input('name'),
+                'photo'=>$fileNameNew
+            ])) {
+                Storage::delete('public/img' . $oldImage);
+                //Загрузим файл на сервер
+                $request->file('photo')->storeAs('public/img', $fileNameNew);
+            };
+        }else {
+            $model->update(['model' => $request->input('model')]);
+        }
         //Вернемся на страницу с альбомами
         return redirect()->back()->withSuccess('Модель успешно обновлена!');
     }

@@ -84,13 +84,13 @@ class BrandController extends Controller
     public function update(BrandRequest $request, Brand $brand)
     {
         // Определим новое имя файла
+        $oldImage = $car->photoCountries;
+        if($request->file('photo') != null) {
         $fullFileName=$request->file('photo')->getClientOriginalName();
         $extension = $request->file('photo')->getClientOriginalExtension();
 
         $fileName = pathinfo($fullFileName, PATHINFO_FILENAME);
         $fileNameNew = $fileName . '_' . time() . '.' . $extension;
-
-        $oldImage = $brand->image;
 
         //Создадим новый альбом
         if($brand->update([
@@ -101,6 +101,9 @@ class BrandController extends Controller
             //Загрузим файл на сервер
             $request->file('photo')->storeAs('public/img', $fileNameNew);
         };
+        }else {
+            $car->update(['car' => $request->input('car')]);
+        }
         //Вернемся на страницу с альбомами
         return redirect()->back()->withSuccess('Марка успешно обновлена!');
     }

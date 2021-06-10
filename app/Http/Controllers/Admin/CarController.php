@@ -53,8 +53,10 @@ class CarController extends Controller
         if($request->file('photo')!=null){
             $fullFileName=$request->file('photo')->getClientOriginalName();
             $extension=$request->file('photo')->getClientOriginalExtension();
+
             $fileName=pathinfo($fullFileName,PATHINFO_FILENAME);
             $fileNameNew=$fileName . '_' . time() . '.' . $extension;
+
             Storage::putFileAs('/public/img',$request->file('photo'),$fileNameNew);
         }else{
             $fileNameNew = 'default.jpg';
@@ -69,7 +71,6 @@ class CarController extends Controller
             'count_seats'=>$request->input('count_seats'),
             'year_release'=>$request->input('year_release'),
             'photo'=>$fileNameNew,
-            'status'=>$request->input('status'),
             'price'=>$request->input('price'),
         ]);
         return redirect()->back()->withSuccess('Автомобиль успешно добавлен!');
@@ -113,32 +114,34 @@ class CarController extends Controller
     public function update(CarRequest $request, Car $car)
     {
         // Определим новое имя файла
+        $oldImage = $car->photoCountries;
+        if($request->file('photo') != null) {
+            $fullFileName = $request->file('photo')->getClientOriginalName();
+            $extension = $request->file('photo')->getClientOriginalExtension();
 
-        $fullFileName=$request->file('photo')->getClientOriginalName();
-        $extension = $request->file('photo')->getClientOriginalExtension();
+            $fileName = pathinfo($fullFileName, PATHINFO_FILENAME);
+            $fileNameNew = $fileName . '_' . time() . '.' . $extension;
 
-        $fileName = pathinfo($fullFileName, PATHINFO_FILENAME);
-        $fileNameNew = $fileName . '_' . time() . '.' . $extension;
-
-        $oldImage = $car->image;
-
-        //Создадим новый альбом
-        if($car->update([
-            'model_car_id'=>$request->input('model_car_id'),
-            'bodywork_id'=>$request->input('bodywork_id'),
-            'color_id'=>$request->input('color_id'),
-            'actuator_id'=>$request->input('actuator_id'),
-            'transmission_id'=>$request->input('transmission_id'),
-            'engine_power'=>$request->input('engine_power'),
-            'count_seats'=>$request->input('count_seats'),
-            'year_release'=>$request->input('year_release'),
-            'photo'=>$fileNameNew,
-            'price'=>$request->input('price'),
-        ])) {
-            Storage::delete('public/img' . $oldImage);
-            //Загрузим файл на сервер
-            $request->file('photo')->storeAs('public/img', $fileNameNew);
-        };
+            //Создадим новый альбом
+            if ($car->update([
+                'model_car_id' => $request->input('model_car_id'),
+                'bodywork_id' => $request->input('bodywork_id'),
+                'color_id' => $request->input('color_id'),
+                'actuator_id' => $request->input('actuator_id'),
+                'transmission_id' => $request->input('transmission_id'),
+                'engine_power' => $request->input('engine_power'),
+                'count_seats' => $request->input('count_seats'),
+                'year_release' => $request->input('year_release'),
+                'photo' => $fileNameNew,
+                'price' => $request->input('price'),
+            ])) {
+                Storage::delete('public/img' . $oldImage);
+                //Загрузим файл на сервер
+                $request->file('photo')->storeAs('public/img', $fileNameNew);
+            };
+        }else {
+            $car->update(['car' => $request->input('car')]);
+        }
         //Вернемся на страницу с альбомами
         return redirect()->back()->withSuccess('Автомобиль успешно обновлен!');
     }
