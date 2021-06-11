@@ -15,7 +15,7 @@
         </div>
     </div>
     <div class="container shadow">
-        <h1 class="m-3">Выберите марку, которая вас интересует:</h1>
+        <h3 class="m-3">Выберите марку, которая вас интересует:</h3>
         <div class="responsive">
             @foreach($brands as $brand)
                 <div class="col-md-3 div-hover">

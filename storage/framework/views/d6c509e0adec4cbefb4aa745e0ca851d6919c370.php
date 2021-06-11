@@ -1,5 +1,3 @@
-
-
 <?php $__env->startSection('content'); ?>
     <div id="carouselExampleSlidesOnly" class="carousel slide m-carousel" data-ride="carousel">
         <div class="car ousel-inner">
@@ -15,7 +13,7 @@
         </div>
     </div>
     <div class="container shadow">
-        <h1 class="m-3">Выберите марку, которая вас интересует:</h1>
+        <h3 class="m-3">Выберите марку, которая вас интересует:</h3>
         <div class="responsive">
             <?php $__currentLoopData = $brands; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $brand): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <div class="col-md-3 div-hover">

@@ -73,7 +73,7 @@
         <li class="list-inline-item"><a class="text-white" href="https://vk.com/pavel.aseev1"><i class="fa fa-vk"></i></a></li>
         <li class="list-inline-item"><a class="text-white" href="https://t.me/W1nterQ"><i class="fa fa-paper-plane"></i></a></li>
     </ul>
-    <p class="my-2">телефон: +7 (929) 239-94-23</p>
+    <p class="my-2 h5">тел: +7 (929) 239-94-23</p>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

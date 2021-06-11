@@ -5,7 +5,7 @@
         <div class="row d-flex justify-content-center">
             @foreach($models as $model)
                 <div class="col-md-5 div-hover my-3">
-                    <div class="card div-models text-light">
+                    <div class="card div-models text-light grow">
                         <a href="{{route('cars-model',[$model->id])}}">
                             <img class="card-img-top" src="{{asset('/storage/img/'.$model->photo)}}" alt="Card image cap">
                         </a>

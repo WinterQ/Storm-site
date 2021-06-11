@@ -3,7 +3,7 @@
         <div class="row d-flex justify-content-center">
             <?php $__currentLoopData = $models; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $model): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <div class="col-md-5 div-hover my-3">
-                    <div class="card div-models text-light">
+                    <div class="card div-models text-light grow">
                         <a href="<?php echo e(route('cars-model',[$model->id])); ?>">
                             <img class="card-img-top" src="<?php echo e(asset('/storage/img/'.$model->photo)); ?>" alt="Card image cap">
                         </a>
