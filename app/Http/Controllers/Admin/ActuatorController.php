@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
 use App\Http\Requests\ActuatorRequest;
 use App\Models\Actuator;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class ActuatorController extends Controller
@@ -16,7 +16,7 @@ class ActuatorController extends Controller
      */
     public function index()
     {
-        return view('admin.actuator.index',['actuators'=>actuator::all()]);
+        return view('admin.actuator.index',['actuators'=>Actuator::all()]);
     }
 
     /**
@@ -26,7 +26,7 @@ class ActuatorController extends Controller
      */
     public function create()
     {
-        return view('admin.actuator.create',['actuators'=>actuator::all()]);
+        return view('admin.actuator.create',['actuators'=>Actuator::all()]);
     }
 
     /**
@@ -35,11 +35,11 @@ class ActuatorController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(ActuatorRequest $request)
+    public function store(Request $request)
     {
-        $new_Actuator = new Actuator();
-        $new_Actuator->name = $request->name;
-        $new_Actuator->save();
+        $new_actuator = new Actuator();
+        $new_actuator->name = $request->name;
+        $new_actuator->save();
 
         return redirect()->back()->withSuccess('Привод успешно добавлен!');
     }
@@ -59,11 +59,11 @@ class ActuatorController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param  \App\Models\Actuator  $actuator
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
+     * @return \Illuminate\Http\Response
      */
     public function edit(Actuator $actuator)
     {
-        return view('admin.actuator.edit',['actuators'=>$actuator]);
+        //
     }
 
     /**

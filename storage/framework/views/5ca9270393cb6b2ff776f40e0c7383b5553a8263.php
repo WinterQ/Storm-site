@@ -18,7 +18,7 @@
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
                         *
                     </button>
-                    <h4><i class="icon fa fa-check"></i><?php echo e(session('success')); ?></h4>
+                    <h4 class="m-0"><i class="icon fa fa-check"></i><?php echo e(session('success')); ?></h4>
                 </div>
             <?php endif; ?>
             <div class="card-group">

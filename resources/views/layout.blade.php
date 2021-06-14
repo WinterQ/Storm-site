@@ -67,13 +67,13 @@
     </div>
 </nav>
 @yield('content')
-<div class="bg-dark text-white text-center py-2">
-    <ul class="list-inline h3">
+<div class="bg-dark text-white text-center py-3 mt-3">
+    <ul class="list-inline h4">
         <li class="list-inline-item"><a class="text-white" href="https://github.com/WinterQ"><i class="fa fa-github"></i></a></li>
         <li class="list-inline-item"><a class="text-white" href="https://vk.com/pavel.aseev1"><i class="fa fa-vk"></i></a></li>
         <li class="list-inline-item"><a class="text-white" href="https://t.me/W1nterQ"><i class="fa fa-paper-plane"></i></a></li>
     </ul>
-    <p class="my-2 h5">тел: +7 (929) 239-94-23</p>
+    <p class="my-2 h6">тел: +7 (929) 239-94-23</p>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

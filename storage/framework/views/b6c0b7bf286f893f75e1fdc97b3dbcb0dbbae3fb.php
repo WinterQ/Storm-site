@@ -1,42 +1,43 @@
 <?php $__env->startSection('content'); ?>
     <div class="container shadow-lg">
-        
-        <h2 class="mt-2">Вы выбрали</h2>
         <?php $__currentLoopData = $cars; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $car): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <div class="row p-3">
-                <div class="col mb-3">
-                    <div class="d-flex justify-content-center flex-column">
-                        <div class="">
-                            <p>Имя:</p>
-                            <input type="text" class="form-control" placeholder="Введите имя">
-                            <p class="mt-2">Фамилия:</p>
-                            <input type="text" class="form-control" placeholder="Введите фамилию">
-                            <p class="mt-2">Телефон:</p>
-                            <input type="text" class="form-control" placeholder="Введите номер телефона">
-                            <p class="mt-2">Почта:</p>
-                            <input type="text" class="form-control" placeholder="Введите электронный адрес">
+            <h2 class="mt-2">Вы выбрали: <?php echo e($car->modelcar->brand->name); ?> <?php echo e($car->modelcar->name); ?></h2>
+            <form action="" method="post" enctype="multipart/form-data">
+                <div class="row p-3">
+                    <div class="col mb-3">
+                        <div class="d-flex justify-content-center flex-column">
+                            <div class="">
+                                <p>Имя:</p>
+                                <input type="text" class="form-control" placeholder="Введите имя">
+                                <p class="mt-2">Фамилия:</p>
+                                <input type="text" class="form-control" placeholder="Введите фамилию">
+                                <p class="mt-2">Телефон:</p>
+                                <input type="text" class="form-control" placeholder="Введите номер телефона">
+                                <p class="mt-2">Почта:</p>
+                                <input type="text" class="form-control" placeholder="Введите электронный адрес">
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 p-3 border rounded bg-dark text-white">
-                    <p class="text-center"><?php echo e($car->modelcar->brand->name); ?> <?php echo e($car->modelcar->name); ?></p>
-                    <img class="w-100" src="<?php echo e(asset('/storage/img/'.$car->photo)); ?>" alt="">
-                    <div class="row d-flex justify-content-between mt-3">
-                        <div class="col-md">Стоимость:</div>
-                        <div class="col-md-auto "><?php echo e($car->price); ?> руб.</div>
+                    <div class="col-md-4 p-3 border rounded bg-dark text-white">
+                        <p class="text-center"><?php echo e($car->modelcar->brand->name); ?> <?php echo e($car->modelcar->name); ?></p>
+                        <img class="w-100" src="<?php echo e(asset('/storage/img/'.$car->photo)); ?>" alt="">
+                        <div class="row d-flex justify-content-between mt-3 mx-1">
+                            <div>Стоимость (руб.):</div>
+                            <div><?php echo e($car->price); ?></div>
+                        </div>
+                        <div class="row d-flex justify-content-between mt-3 mx-1">
+                            <div><p>Количество:</p></div>
+                            <div>
+                                <input type="number" class="form-control input" max="3" min="1" value="1">
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-primary w-100 mt-2">Отправить заявку</a>
                     </div>
-                    <div class="row d-flex justify-content-between mt-3">
-                        <div class="col-md"><p>Количество:</p></div>
-                        <div class="col-md-3"><input type="number" class="form-control" max="3" min="1" value="1"></div>
-                    </div>
-                    <hr class="bg-white">
-                    <p>Итого: </p>
-                    <a href="" class="btn btn-primary w-100">Отправить заявку</a>
                 </div>
-            </div>
+            </form>
             <div class="border my-4">
                 <p class="text-center text-white bg-dark">Характеристики</p>
-                <div class="row d-flex justify-content-around">
+                <div class="row d-flex justify-content-around px-3">
                     <div class="col-md-auto">
                         <p>Тип кузова: <?php echo e($car->bodywork->name); ?></p>
                         <p>Цвет: <?php echo e($car->color->name); ?></p>

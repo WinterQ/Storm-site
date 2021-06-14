@@ -1,11 +1,11 @@
 @extends('layouts.admin_layout')
-@section('title','Все марки')
+@section('title','Все типы двигателей')
 @section('content')
     <div class="content-header">
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Все марки</h1>
+                    <h1 class="m-0">Все типы двигателей</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
@@ -19,7 +19,7 @@
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
                         *
                     </button>
-                    <h4><i class="icon fa fa-check"></i>{{session('success')}}</h4>
+                    <h4 class="m-0"><i class="icon fa fa-check"></i>{{session('success')}}</h4>
                 </div>
             @endif
             <div class="card-group">

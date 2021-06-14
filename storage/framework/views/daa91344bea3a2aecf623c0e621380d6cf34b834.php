@@ -17,7 +17,7 @@
             <?php if(session('success')): ?>
                 <div class="alert alert-success" role="alert">
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
-                    <h4><i class="icon fa fa-check"></i><?php echo e(session('success')); ?></h4>
+                    <h4 class="m-0"><i class="icon fa fa-check"></i><?php echo e(session('success')); ?></h4>
                 </div>
             <?php endif; ?>
         </div><!-- /.container-fluid -->
@@ -59,6 +59,14 @@
                                         </select>
                                     </div>
                                     <div class="form-group">
+                                        <label>Привод</label>
+                                        <select name="actuator_id" class="form-control" required>
+                                            <?php $__currentLoopData = $actuators; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $actuator): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                                <option value="<?php echo e($actuator->id); ?>" <?php if($actuator->id == $car->actuator_id): ?> selected <?php endif; ?>><?php echo e($actuator->name); ?></option>
+                                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
                                         <label>Коробка передач</label>
                                         <select name="transmission_id" class="form-control" required>
                                             <?php $__currentLoopData = $transmissions; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $transmission): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
@@ -82,14 +90,24 @@
                                                placeholder="Введите год выпуска" required>
                                     </div>
                                     <div class="form-group">
-                                        <label for="photo" class="form-label">Фото:</label>
-                                        <input value="<?php echo e($car->photo); ?>" type="file" class="form-control" id="photo" name="photo">
                                         
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Статус</label>
-                                        <input value="<?php echo e($car->status); ?>" type="number" name="status" class="form-control" id="exampleInputCategory"
-                                               placeholder="Введите статус" required>
+                                        <img class="w-100" id="showImage" src="<?php echo e(asset('storage/img/'.$car->photo)); ?>" alt="">
+                                        <input value="<?php echo e($car->photo); ?>" type="file" class="form-control" id="photo"
+                                               name="photo" onchange="loadImage(this)">
+                                        <script>
+                                            function loadImage(e){
+                                                showImage.bidden = false;
+                                                showImage.src = URL.createObjectURL(e.files[0]);
+                                                showImage.onload = function(){
+                                                    URL.revokeObjectURL(e.src);
+                                                }
+                                            }
+                                            tinymce.init({
+                                                selector: 'img',
+                                                plugins: 'advlist autolink lists charmap print preview hr',
+                                                toolbar_mode: 'floating',
+                                            })
+                                        </script>
                                     </div>
                                     <div class="form-group">
                                         <label>Цена</label>

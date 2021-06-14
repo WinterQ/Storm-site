@@ -19,7 +19,7 @@
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
                         *
                     </button>
-                    <h4><i class="icon fa fa-check"></i>{{session('success')}}</h4>
+                    <h4 class="m-0"><i class="icon fa fa-check"></i>{{session('success')}}</h4>
                 </div>
             @endif
             <div class="card-group">
@@ -42,6 +42,7 @@
                     </div>
                 @endforeach
             </div>
+            <a class="btn btn-primary" href="{{route('actuator.create')}}">Добавить тип привода</a>
         </div><!-- /.container-fluid -->
     </div>
 @endsection

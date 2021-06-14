@@ -17,7 +17,7 @@
             <?php if(session('success')): ?>
                 <div class="alert alert-success" role="alert">
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
-                    <h4><i class="icon fa fa-check"></i><?php echo e(session('success')); ?></h4>
+                    <h4 class="m-0"><i class="icon fa fa-check"></i><?php echo e(session('success')); ?></h4>
                 </div>
             <?php endif; ?>
         </div><!-- /.container-fluid -->
@@ -53,6 +53,14 @@
                                     <select name="color_id" class="form-control" required>
                                         <?php $__currentLoopData = $colors; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $color): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                             <option value="<?php echo e($color->id); ?>"><?php echo e($color->name); ?></option>
+                                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Привод</label>
+                                    <select name="actuator_id" class="form-control" required>
+                                        <?php $__currentLoopData = $actuators; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $actuator): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                            <option value="<?php echo e($actuator->id); ?>"><?php echo e($actuator->name); ?></option>
                                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                     </select>
                                 </div>
@@ -99,11 +107,6 @@
                                             toolbar_mode: 'floating',
                                         })
                                     </script>
-                                </div>
-                                <div class="form-group">
-                                    <label>Статус</label>
-                                    <input type="number" name="status" class="form-control" id="exampleInputCategory"
-                                       placeholder="Введите статус" required>
                                 </div>
                                 <div class="form-group">
                                     <label>Цена</label>

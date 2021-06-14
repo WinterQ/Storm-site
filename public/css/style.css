@@ -51,9 +51,19 @@ footer{
     /* Sticky footer */
     flex-shrink: 0;
 }
-.grow:hover {
-    -webkit-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    transform: scale(1.2);
+.grow{
+    overflow:hidden;
 }
-
+.grow img {
+    -moz-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    -webkit-transition: all 1s ease-out;
+}
+.grow img:hover {
+    position: relative;
+    opacity: 1;
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.1); /*вот так*/
+}

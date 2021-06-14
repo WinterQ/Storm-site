@@ -71,13 +71,13 @@
 
                     <li class="nav-item">
                         <a href="<?php echo e(route('homeAdmin')); ?>" class="nav-link">
-                            <i class="nav-icon fa fa-tachometer-alt"></i>
-                            <p>  Главная </p>
+                            <i class="nav-icon fa fa-tachometer"></i>
+                            <p>Главная</p>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link">
-                            <i class="nav-icon far fa-newspaper"></i>
+                            <i class="nav-icon fa fa-edit"></i>
                             <p>Автомобиль
                                 <i class="right fa fa-angle-left"></i>
                             </p>                </a>
@@ -96,7 +96,7 @@
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link">
-                            <i class="nav-icon fa fa-tree"></i>
+                            <i class="nav-icon fa fa-edit"></i>
                             <p>Марка
                                 <i class="right fa fa-angle-left"></i>
                             </p>                </a>
