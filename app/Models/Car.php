@@ -9,7 +9,7 @@ class Car extends Model
 {
     use HasFactory;
     public $timestamps=false;
-    protected $fillable=['model_car_id','bodywork_id','color_id','transmission_id','engine_power','count_seats','year_release','photo','price'];
+    protected $fillable=['model_car_id','bodywork_id','color_id','actuator_id','transmission_id','engine_power','count_seats','year_release','photo','price'];
 
     public function modelcar()
     {
@@ -30,5 +30,9 @@ class Car extends Model
     public function transmission()
     {
         return $this->belongsTo(Transmission::class, 'transmission_id');
+    }
+    public function car_order()
+    {
+        return $this->hasMany(Car_order::class);
     }
 }

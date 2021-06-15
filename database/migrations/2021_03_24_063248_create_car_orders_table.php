@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateApplicationFormCarsTable extends Migration
+class CreateCarOrdersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class CreateApplicationFormCarsTable extends Migration
      */
     public function up()
     {
-        Schema::create('application_form_cars', function (Blueprint $table) {
-            $table->primary(['application_form_id', 'car_id']);
-            $table->foreignId('application_form_id')->constrained('application_forms')->cascadeOnDelete()->cascadeOnUpdate();
+        Schema::create('car_orders', function (Blueprint $table) {
+            $table->primary(['bid_id', 'car_id']);
+            $table->foreignId('bid_id')->constrained('bids')->cascadeOnDelete()->cascadeOnUpdate();
             $table->foreignId('car_id')->constrained('cars')->cascadeOnDelete()->cascadeOnUpdate();
-            $table->integer('count_cars');
         });
     }
 
@@ -28,6 +27,6 @@ class CreateApplicationFormCarsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('application_form_cars');
+        Schema::dropIfExists('car_orders');
     }
 }
