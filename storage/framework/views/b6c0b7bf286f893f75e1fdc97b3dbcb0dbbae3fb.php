@@ -1,21 +1,30 @@
 <?php $__env->startSection('content'); ?>
     <div class="container shadow-lg">
+        <?php if(session('success')): ?>
+            <div class="alert alert-success my-3" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+                <h4 class="m-0"><i class="icon fa fa-check"></i><?php echo e(session('success')); ?></h4>
+            </div>
+        <?php endif; ?>
         <?php $__currentLoopData = $cars; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $car): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <h2 class="mt-2">Вы выбрали: <?php echo e($car->modelcar->brand->name); ?> <?php echo e($car->modelcar->name); ?></h2>
-            <form action="" method="post" enctype="multipart/form-data">
                 <div class="row p-3">
                     <div class="col mb-3">
                         <div class="d-flex justify-content-center flex-column">
-                            <div class="">
-                                <p>Имя:</p>
-                                <input type="text" class="form-control" placeholder="Введите имя">
-                                <p class="mt-2">Фамилия:</p>
-                                <input type="text" class="form-control" placeholder="Введите фамилию">
-                                <p class="mt-2">Телефон:</p>
-                                <input type="text" class="form-control" placeholder="Введите номер телефона">
-                                <p class="mt-2">Почта:</p>
-                                <input type="text" class="form-control" placeholder="Введите электронный адрес">
-                            </div>
+                            <form action="<?php echo e(route('client.store')); ?>" method="post" enctype="multipart/form-data">
+                                <?php echo csrf_field(); ?>
+                                <div class="">
+                                    <p>Имя:</p>
+                                    <input type="text" name="first_name" class="form-control" placeholder="Введите имя">
+                                    <p class="mt-2">Фамилия:</p>
+                                    <input type="text" name="last_name" class="form-control" placeholder="Введите фамилию">
+                                    <p class="mt-2">Телефон:</p>
+                                    <input type="text" name="phone" class="form-control" placeholder="Введите номер телефона">
+                                    <p class="mt-2">Почта:</p>
+                                    <input type="text" name="email" class="form-control" placeholder="Введите электронный адрес">
+                                </div>
+                                
+                            </form>
                         </div>
                     </div>
                     <div class="col-md-4 p-3 border rounded bg-dark text-white">
@@ -25,16 +34,9 @@
                             <div>Стоимость (руб.):</div>
                             <div><?php echo e($car->price); ?></div>
                         </div>
-                        <div class="row d-flex justify-content-between mt-3 mx-1">
-                            <div><p>Количество:</p></div>
-                            <div>
-                                <input type="number" class="form-control input" max="3" min="1" value="1">
-                            </div>
-                        </div>
-                        <a href="#" class="btn btn-primary w-100 mt-2">Отправить заявку</a>
+                        <button type="submit" class="btn btn-primary text-white mt-3 w-100">Отправить заявку</button>
                     </div>
                 </div>
-            </form>
             <div class="border my-4">
                 <p class="text-center text-white bg-dark">Характеристики</p>
                 <div class="row d-flex justify-content-around px-3">

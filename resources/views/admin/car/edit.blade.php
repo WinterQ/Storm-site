@@ -91,8 +91,6 @@
                                                placeholder="Введите год выпуска" required>
                                     </div>
                                     <div class="form-group">
-                                        {{--<label for="photo" class="form-label">Фото:</label>
-                                        <input value="{{$car->photo}}" type="file" class="form-control" id="photo" name="photo">--}}
                                         <img class="w-100" id="showImage" src="{{asset('storage/img/'.$car->photo)}}" alt="">
                                         <input value="{{$car->photo}}" type="file" class="form-control" id="photo"
                                                name="photo" onchange="loadImage(this)">

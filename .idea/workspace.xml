@@ -25,7 +25,25 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="953b4d12-2ca1-4117-85a7-bf51f914b6f5" name="Default Changelist" comment="" />
+    <list default="true" id="953b4d12-2ca1-4117-85a7-bf51f914b6f5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BidController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BidController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Bid.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Bid.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/car/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/car/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/home/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/home/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/car.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/car.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/admin_layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/admin_layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/EbQDXmf6oqTkhL0qR3jYllztYutJwXru1wBbrEzu" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/nqATQq5fnku6uMbIJErMAac9CwWGesrpPophwEuI" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/2b2ce36eebdef21d47f6426ece33335d63c807ce.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/2b2ce36eebdef21d47f6426ece33335d63c807ce.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/6acab6fd35f55dccf917246b0689bf2674ce1dab.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/6acab6fd35f55dccf917246b0689bf2674ce1dab.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/8beb7789a1f31f4e8049e7dc493eda9577ea7dce.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/8beb7789a1f31f4e8049e7dc493eda9577ea7dce.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/b6c0b7bf286f893f75e1fdc97b3dbcb0dbbae3fb.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/b6c0b7bf286f893f75e1fdc97b3dbcb0dbbae3fb.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/logs/laravel.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/laravel.log" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -177,18 +195,18 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="ignore_missing_gitignore" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/actuator" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Programs\OpenServer\domains\Storm-site\resources\views\admin" />
+      <recent name="E:\Programs\OpenServer\domains\Storm-site\resources\views\admin\client" />
       <recent name="D:\Program Files\OpenServer\domains\Storm-site\resources\views\admin\actuator" />
       <recent name="D:\Program Files\OpenServer\domains\Storm\resources\views\admin" />
       <recent name="D:\Program Files\OpenServer\domains\Storm\resources\views\admin\model" />
-      <recent name="D:\Program Files\OpenServer\domains\Storm\resources\views\admin\brand" />
-      <recent name="D:\Program Files\OpenServer\domains\Storm\resources\views" />
     </key>
   </component>
   <component name="RunManager">
@@ -268,6 +286,7 @@
       <workItem from="1623669388725" duration="7220000" />
       <workItem from="1623772370521" duration="32000" />
       <workItem from="1623772443626" duration="7637000" />
+      <workItem from="1623855955652" duration="16574000" />
     </task>
     <servers />
   </component>

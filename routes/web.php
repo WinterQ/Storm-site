@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ClientController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CarController;
 use Illuminate\Support\Facades\Auth;
@@ -10,6 +11,8 @@ Route::get('/brand/{brand}',[App\Http\Controllers\BrandController::class,'show']
 Route::get('/brand/model/{modelcar}',[CarController::class,'carsForModel'])->name('cars-model');
 Route::get('/cars',[CarController::class,'cars'])->name('cars-all');
 Route::get('/carsAll',[CarController::class,'carsAll'])->name('all-cars');
+
+Route::resource('client', ClientController::class);
 
 Auth::routes();
 
@@ -24,4 +27,6 @@ Route::middleware(['role:admin'])->prefix('admin_panel')->group(function(){
     Route::resource('color',App\Http\Controllers\Admin\ColorController::class);
     Route::resource('actuator',App\Http\Controllers\Admin\ActuatorController::class);
     Route::resource('transmission',App\Http\Controllers\Admin\TransmissionController::class);
+    Route::resource('client',App\Http\Controllers\Admin\ClientController::class);
+    Route::resource('bid',App\Http\Controllers\Admin\BidController::class);
 });

@@ -9,6 +9,8 @@ class Bid extends Model
 {
     use HasFactory;
     public $timestamps=false;
+    /*protected $fillable=['client_id'];*/
+    protected $guarded = [];
 
     public function client()
     {

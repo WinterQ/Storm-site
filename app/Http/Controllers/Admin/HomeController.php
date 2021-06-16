@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Actuator;
 use App\Models\Brand;
 use App\Models\Car;
+use App\Models\Client;
 use App\Models\Color;
 use App\Models\ModelCar;
 use App\Models\Transmission;
@@ -20,6 +21,7 @@ class HomeController extends Controller
         $colors_count = Color::all()->count();
         $actuators_count = Actuator::all()->count();
         $transmissions_count = Transmission::all()->count();
+        $clients_count = Client::all()->count();
 
         return view('admin.home.index', [
             'cars_count'=>$cars_count,
@@ -27,7 +29,8 @@ class HomeController extends Controller
             'models_count'=>$models_count,
             'colors_count'=>$colors_count,
             'actuators_count'=>$actuators_count,
-            'transmissions_count'=>$transmissions_count
+            'transmissions_count'=>$transmissions_count,
+            'clients_count'=>$clients_count
         ]);
     }
 }
