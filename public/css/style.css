@@ -67,3 +67,6 @@ footer{
     -o-transform: scale(1.2);
     transform: scale(1.1); /*вот так*/
 }
+.footer{
+    margin-top: 154px;
+}
