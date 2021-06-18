@@ -16,7 +16,7 @@ class CreateBidsTable extends Migration
         Schema::create('bids', function (Blueprint $table) {
             $table->id();
             $table->foreignId('client_id')->constrained('clients')->cascadeOnDelete()->cascadeOnUpdate();
-            $table->dateTime('bid_date');
+            $table->date('bid_date');
             $table->boolean('status')->default(true);
         });
     }
@@ -28,6 +28,6 @@ class CreateBidsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('application_forms');
+        Schema::dropIfExists('bids');
     }
 }

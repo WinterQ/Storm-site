@@ -1,3 +1,4 @@
+
 <?php $__env->startSection('title', 'Изменение данных'); ?>
 <?php $__env->startSection('content'); ?>
     <!-- Content Header (Page header) -->
@@ -17,7 +18,7 @@
             <?php if(session('success')): ?>
                 <div class="alert alert-success" role="alert">
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
-                    <h4><i class="icon fa fa-check"></i><?php echo e(session('success')); ?></h4>
+                    <h4 class="m-0"><i class="icon fa fa-check"></i><?php echo e(session('success')); ?></h4>
                 </div>
             <?php endif; ?>
         </div><!-- /.container-fluid -->
@@ -90,7 +91,6 @@
                                                placeholder="Введите год выпуска" required>
                                     </div>
                                     <div class="form-group">
-                                        
                                         <img class="w-100" id="showImage" src="<?php echo e(asset('storage/img/'.$car->photo)); ?>" alt="">
                                         <input value="<?php echo e($car->photo); ?>" type="file" class="form-control" id="photo"
                                                name="photo" onchange="loadImage(this)">

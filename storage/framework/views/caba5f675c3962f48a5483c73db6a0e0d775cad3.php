@@ -71,13 +71,13 @@
 
                     <li class="nav-item">
                         <a href="<?php echo e(route('homeAdmin')); ?>" class="nav-link">
-                            <i class="nav-icon fa fa-tachometer-alt"></i>
-                            <p>  Главная </p>
+                            <i class="nav-icon fa fa-tachometer"></i>
+                            <p>Главная</p>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link">
-                            <i class="nav-icon far fa-newspaper"></i>
+                            <i class="nav-icon fa fa-edit"></i>
                             <p>Автомобиль
                                 <i class="right fa fa-angle-left"></i>
                             </p>                </a>
@@ -96,7 +96,7 @@
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link">
-                            <i class="nav-icon fa fa-tree"></i>
+                            <i class="nav-icon fa fa-edit"></i>
                             <p>Марка
                                 <i class="right fa fa-angle-left"></i>
                             </p>                </a>
@@ -185,6 +185,44 @@
                             <li class="nav-item">
                                 <a href="<?php echo e(route('actuator.create')); ?>" class="nav-link">
                                     <p>Добавить привод</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fa fa-edit"></i>
+                            <p>Клиент
+                                <i class="right fa fa-angle-left"></i>
+                            </p>                </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="<?php echo e(route('client.index')); ?>" class="nav-link">
+                                    <p>Все клиенты</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="<?php echo e(route('client.create')); ?>" class="nav-link">
+                                    <p>Добавить клиента</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fa fa-edit"></i>
+                            <p>Заявки
+                                <i class="right fa fa-angle-left"></i>
+                            </p>                </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="<?php echo e(route('bid.index')); ?>" class="nav-link">
+                                    <p>Все заявки</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="<?php echo e(route('bid.create')); ?>" class="nav-link">
+                                    <p>Добавить заявку</p>
                                 </a>
                             </li>
                         </ul>

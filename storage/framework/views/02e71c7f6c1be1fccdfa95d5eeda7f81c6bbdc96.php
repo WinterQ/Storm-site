@@ -1,3 +1,5 @@
+
+
 <?php $__env->startSection('content'); ?>
     <div id="carouselExampleSlidesOnly" class="carousel slide m-carousel" data-ride="carousel">
         <div class="carousel-inner">

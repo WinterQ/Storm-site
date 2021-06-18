@@ -17,11 +17,11 @@ class BidController extends Controller
     public function index()
     {
         $bids = Bid::all();
-        if(request()->status==1){
-            $bids=Bid::where('status','1')->get();
-        }else if(request()->status==0){
-            $bids=Bid::where('status','0')->get();
-        }
+//        if(request()->status==1){
+//            $bids=Bid::where('status','1')->get();
+//        }else if(request()->status==0){
+//            $bids=Bid::where('status','0')->get();
+//        }
         session(['status'=>request()->status]);
         return view('admin.bid.index',['bids'=>$bids]);
     }
@@ -85,10 +85,12 @@ class BidController extends Controller
      */
     public function update(Request $request, Bid $bid)
     {
-        $bid->client_id=$request->client_id;
-        $bid->bid_date=$request->bid_date;
+        //dd($bid);
+//        $bid->client_id=$request->client_id;
+//        $bid->bid_date=$request->bid_date;
         $bid->status=!$bid->status;
         $bid->save();
+        return redirect()->back()->withSuccess('Статус изменен');
     }
 
     /**

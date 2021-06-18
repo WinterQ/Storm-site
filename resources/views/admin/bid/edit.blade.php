@@ -44,12 +44,12 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Дата заявки</label>
-                                    <input value="{{$bid->bid_date}}" type="date" name="bid_date" class="form-control" id="bid_date" required>
+                                    <input type="date" value="{{$bid->bid_date}}" name="bid_date" class="form-control" id="bid_date" required>
                                 </div>
                                 <div class="form-group">
                                     <label>Статус заявки</label>
-                                    <input value="{{$bid->status ? 0:1}}" type="checkbox" name="status" {{$bid->status ? 'checked' : ''}} class="form-control" id="status">
-                                    <label for="status">Выполнено</label>
+                                    <input value="{{$bid->status ? 0:1}}" style="width:20px" type="checkbox" name="status" {{$bid->status ? 'checked' : ''}} class="form-control" id="status">
+                                    <label for="status" class="font-weight-normal text-{{$bid->status ? 'green':'red'}}">{{$bid->status ? 'Выполнена':'Не выполнена'}}</label>
                                 </div>
                             </div>
                             <!-- /.card-body -->
